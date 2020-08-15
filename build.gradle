@@ -1,0 +1,31 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'){
+        exclude group:'ch.qos.logback'//logback-classic:1.2.3'
+    }
+    implementation 'javax.ws.rs:javax.ws.rs-api:2.1'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
+}
+
+group = 'com.deepti.kafka.spring.profile'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '10'
