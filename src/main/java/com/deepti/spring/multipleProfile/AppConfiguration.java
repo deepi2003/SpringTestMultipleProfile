@@ -18,7 +18,6 @@ public class AppConfiguration {
 
 
     @Bean
-    @Primary
     @Qualifier("component2")
     public MyComponent component2() {
         return new MyComponent("component2");
