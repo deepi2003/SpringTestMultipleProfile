@@ -5,6 +5,8 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -29,5 +31,4 @@ public class TestWithProfile1 {
         assertEquals("Spring-profile1",applicationID);
         assertEquals("localhost:9093",bootstrapServers);
     }
-
 }
